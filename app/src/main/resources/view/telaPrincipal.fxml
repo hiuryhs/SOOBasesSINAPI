@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="534.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufsc.view.TelaPrincipalController">
+  <tabs>
+    <Tab text="SINAPI PREÇOS">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TitledPane animated="false" collapsible="false" layoutX="10.0" layoutY="14.0" prefHeight="484.0" prefWidth="514.0" text="Selecionar Bases de Dados">
+                     <content>
+                        <AnchorPane focusTraversable="true" minHeight="0.0" minWidth="0.0" prefHeight="76.0" prefWidth="512.0">
+                           <children>
+                              <TitledPane animated="false" collapsible="false" layoutX="-1.0" prefHeight="173.0" prefWidth="514.0" text="Desonerado">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="164.0" prefWidth="512.0">
+                                       <children>
+                                          <Button fx:id="botaoSelPSSAD" layoutX="413.0" layoutY="44.0" mnemonicParsing="false" onAction="#botaoSelPSSADClic" prefHeight="25.0" prefWidth="75.0" text="Selecionar" />
+                                          <TextField fx:id="campoPSSAD" layoutX="23.0" layoutY="44.0" prefHeight="25.0" prefWidth="376.0" />
+                                          <Label layoutX="23.0" layoutY="14.0" text="Planilha SINAPI de Serviços Analítica" />
+                                          <Button fx:id="botaoSelPSID" layoutX="414.0" layoutY="110.0" mnemonicParsing="false" onAction="#botaoSelPSIDClic" prefHeight="25.0" prefWidth="75.0" text="Selecionar" />
+                                          <TextField fx:id="campoPSID" layoutX="24.0" layoutY="110.0" prefHeight="25.0" prefWidth="376.0" />
+                                          <Label layoutX="24.0" layoutY="80.0" text="Planilha SINAPI de Insumos" />
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </TitledPane>
+                              <TitledPane animated="false" collapsible="false" layoutX="-1.0" layoutY="173.0" prefHeight="173.0" prefWidth="514.0" text="Onerado">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="164.0" prefWidth="512.0">
+                                       <children>
+                                          <Button fx:id="botaoSelPSSAO" layoutX="413.0" layoutY="44.0" mnemonicParsing="false" onAction="#botaoSelPSSAOClic" prefHeight="25.0" prefWidth="75.0" text="Selecionar" />
+                                          <TextField fx:id="campoPSSAO" layoutX="23.0" layoutY="44.0" prefHeight="25.0" prefWidth="376.0" />
+                                          <Label layoutX="23.0" layoutY="14.0" text="Planilha SINAPI de Serviços Analítica" />
+                                          <Button fx:id="botaoSelPSIO" layoutX="414.0" layoutY="110.0" mnemonicParsing="false" onAction="#botaoSelPSIOClic" prefHeight="25.0" prefWidth="75.0" text="Selecionar" />
+                                          <TextField fx:id="campoPSIO" layoutX="24.0" layoutY="110.0" prefHeight="25.0" prefWidth="376.0" />
+                                          <Label layoutX="24.0" layoutY="80.0" text="Planilha SINAPI de Insumos" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" collapsible="false" layoutX="-1.0" layoutY="346.0" prefHeight="112.0" prefWidth="514.0" text="Família de Insumos">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="164.0" prefWidth="512.0">
+                                       <children>
+                                          <Button fx:id="botaoSelPSFI" layoutX="413.0" layoutY="44.0" mnemonicParsing="false" onAction="#botaoSelPSFIClic" prefHeight="25.0" prefWidth="75.0" text="Selecionar" />
+                                          <TextField fx:id="campoPSFI" layoutX="23.0" layoutY="44.0" prefHeight="25.0" prefWidth="376.0" />
+                                          <Label layoutX="23.0" layoutY="14.0" text="Planilha SINAPI de Família de Insumos" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+                  <TitledPane animated="false" collapsible="false" layoutX="10.0" layoutY="498.0" prefHeight="142.0" prefWidth="514.0" text="Criar Bases de Dados">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="164.0" prefWidth="512.0">
+                           <children>
+                              <Button fx:id="botaoExecutaBasesPrecos" layoutX="202.0" layoutY="77.0" mnemonicParsing="false" onAction="#botaoExecBasesDadosClic" prefHeight="25.0" prefWidth="75.0" text="Executar" />
+                              <Label layoutX="25.0" layoutY="14.0" text="Destino" />
+                              <TextField fx:id="campoDestinoPrecos" layoutX="25.0" layoutY="35.0" prefHeight="25.0" prefWidth="376.0" />
+                              <Button fx:id="botaoSelDestPrecos" layoutX="412.0" layoutY="35.0" mnemonicParsing="false" onAction="#botaoSelDesPrecostClic" prefHeight="25.0" prefWidth="75.0" text="Selecionar" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+            </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="SINAPI HORAS">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TitledPane animated="false" collapsible="false" layoutX="10.0" layoutY="8.0" prefHeight="226.0" prefWidth="514.0" text="Selecionar Base de Dados">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="512.0">
+                           <children>
+                              <TitledPane animated="false" collapsible="false" layoutX="-1.0" prefHeight="100.0" prefWidth="514.0" text="Desonerado">
+                                 <content>
+                                    <AnchorPane focusTraversable="true" minHeight="0.0" minWidth="0.0" prefHeight="76.0" prefWidth="512.0">
+                                       <children>
+                                          <Button fx:id="botaoSelPSSADH" layoutX="413.0" layoutY="36.0" mnemonicParsing="false" onAction="#botaoSelPSSADHClic" prefHeight="25.0" prefWidth="75.0" text="Selecionar" />
+                                          <TextField fx:id="campoPSSADH" layoutX="27.0" layoutY="36.0" prefHeight="25.0" prefWidth="370.0" />
+                                          <Label layoutX="33.0" layoutY="11.0" text="Planilha de Composicoes SINAPI Analitica" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" collapsible="false" layoutX="-1.0" layoutY="100.0" prefHeight="100.0" prefWidth="514.0" text="Onerado">
+                                 <content>
+                                    <AnchorPane focusTraversable="true" minHeight="0.0" minWidth="0.0" prefHeight="76.0" prefWidth="512.0">
+                                       <children>
+                                          <Button fx:id="botaoSelPSSAOH" layoutX="413.0" layoutY="36.0" mnemonicParsing="false" onAction="#botaoSelPSSAOHClic" prefHeight="25.0" prefWidth="75.0" text="Selecionar" />
+                                          <TextField fx:id="campoPSSAOH" layoutX="27.0" layoutY="36.0" prefHeight="25.0" prefWidth="370.0" />
+                                          <Label layoutX="33.0" layoutY="11.0" text="Planilha de Composicoes SINAPI Analitica" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane animated="false" collapsible="false" layoutX="10.0" layoutY="234.0" prefHeight="137.0" prefWidth="514.0" text="Criar Bases de Dados">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="164.0" prefWidth="512.0">
+                           <children>
+                              <Button fx:id="botaoExecutaBasesHoras" layoutX="202.0" layoutY="77.0" mnemonicParsing="false" onAction="#botaoExecBasesHorasClic" prefHeight="25.0" prefWidth="75.0" text="Executar" />
+                              <Label layoutX="25.0" layoutY="14.0" text="Destino" />
+                              <TextField fx:id="campoDestinoHoras" layoutX="25.0" layoutY="35.0" prefHeight="25.0" prefWidth="376.0" />
+                              <Button fx:id="botaoSelDestHoras" layoutX="412.0" layoutY="35.0" mnemonicParsing="false" onAction="#botaoSelDestHorasClic" prefHeight="25.0" prefWidth="75.0" text="Selecionar" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
