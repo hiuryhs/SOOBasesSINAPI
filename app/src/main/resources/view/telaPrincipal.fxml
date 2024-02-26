@@ -65,7 +65,7 @@
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="164.0" prefWidth="512.0">
                            <children>
-                              <Button fx:id="botaoExecutaBasesPrecos" layoutX="202.0" layoutY="77.0" mnemonicParsing="false" onAction="#botaoExecBasesDadosClic" prefHeight="25.0" prefWidth="75.0" text="Executar" />
+                              <Button fx:id="botaoExecutaBasesPrecos" defaultButton="true" layoutX="202.0" layoutY="77.0" mnemonicParsing="false" onAction="#botaoExecBasesDadosClic" prefHeight="25.0" prefWidth="75.0" text="Executar" />
                               <Label layoutX="25.0" layoutY="14.0" text="Destino" />
                               <TextField fx:id="campoDestinoPrecos" layoutX="25.0" layoutY="35.0" prefHeight="25.0" prefWidth="376.0" />
                               <Button fx:id="botaoSelDestPrecos" layoutX="412.0" layoutY="35.0" mnemonicParsing="false" onAction="#botaoSelDesPrecostClic" prefHeight="25.0" prefWidth="75.0" text="Selecionar" />
@@ -114,7 +114,7 @@
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="164.0" prefWidth="512.0">
                            <children>
-                              <Button fx:id="botaoExecutaBasesHoras" layoutX="202.0" layoutY="77.0" mnemonicParsing="false" onAction="#botaoExecBasesHorasClic" prefHeight="25.0" prefWidth="75.0" text="Executar" />
+                              <Button fx:id="botaoExecutaBasesHoras" defaultButton="true" layoutX="202.0" layoutY="77.0" mnemonicParsing="false" onAction="#botaoExecBasesHorasClic" prefHeight="25.0" prefWidth="75.0" text="Executar" />
                               <Label layoutX="25.0" layoutY="14.0" text="Destino" />
                               <TextField fx:id="campoDestinoHoras" layoutX="25.0" layoutY="35.0" prefHeight="25.0" prefWidth="376.0" />
                               <Button fx:id="botaoSelDestHoras" layoutX="412.0" layoutY="35.0" mnemonicParsing="false" onAction="#botaoSelDestHorasClic" prefHeight="25.0" prefWidth="75.0" text="Selecionar" />

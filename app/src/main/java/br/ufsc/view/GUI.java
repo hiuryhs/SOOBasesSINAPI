@@ -4,6 +4,8 @@
 package br.ufsc.view;
 
 
+import com.pixelduke.transit.Style;
+import com.pixelduke.transit.TransitTheme;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -28,9 +30,11 @@ public class GUI extends Application{
         
         //Cria a cena
         Scene cena = new Scene(raiz);
+        
         // Aplica o tema da interface
-        String temaCSS = getClass().getClassLoader().getResource("view/tema_jafvafx_cupertino-light.css").toExternalForm();
-        cena.getStylesheets().add(temaCSS);
+        TransitTheme tema = new TransitTheme(Style.LIGHT);
+        tema.setScene(cena);
+        
         //Coloca a cena criada no palco telaPrincipal
         telaP.setScene(cena);
         //Cria uma instancia do controlador de tabelas editaveis, necessario

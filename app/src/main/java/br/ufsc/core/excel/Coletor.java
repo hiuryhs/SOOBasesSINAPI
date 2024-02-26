@@ -89,8 +89,6 @@ public abstract class Coletor {
         
         String valor;
         
-//        System.out.println(celula.getRowIndex() + "  " + celula.getColumnIndex());
-        
         try{
             valor = celula.getStringCellValue();
             valor = Revisor.limpaEspacos(valor);

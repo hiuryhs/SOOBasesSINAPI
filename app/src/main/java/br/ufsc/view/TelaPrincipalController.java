@@ -5,6 +5,8 @@ import br.ufsc.core.excel.ColetorInsumo;
 import br.ufsc.core.excel.EscritorComposicao;
 import br.ufsc.core.excel.EscritorHoras;
 import br.ufsc.core.excel.EscritorInsumo;
+import com.pixelduke.transit.Style;
+import com.pixelduke.transit.TransitTheme;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Field;
@@ -52,6 +54,9 @@ public class TelaPrincipalController implements Initializable {
     
     private int codColetaComp;
     private int codColetaInsu;
+    
+    // Tema para a interface
+    TransitTheme tema = new TransitTheme(Style.LIGHT);
     
     Stage telaProgresso;
     
@@ -172,6 +177,10 @@ public class TelaPrincipalController implements Initializable {
         
         // Instancia um objeto do tipo Alerta (que estende a classe Dialog)
         Alert janelaAlerta = new Alert(tipoAlerta);
+        
+//        //Aplica o tema a interface
+//        this.tema.setScene(janelaAlerta.getDialogPane().getScene());
+        
         janelaAlerta.setTitle(titulo);
         janelaAlerta.setHeaderText(cabeca);
         janelaAlerta.setContentText(texto);
@@ -197,12 +206,16 @@ public class TelaPrincipalController implements Initializable {
      * @param texto
      * @param txtBotao1
      */
-    private boolean criaJanelaEscolha(String titulo, String cabeca, String texto,
+    private boolean criaJanelaAlerta(String titulo, String cabeca, String texto,
             String txtBotao1, String txtBotao2, Alert.AlertType tipoAlerta){
         
         boolean confirma;
         // Instancia um objeto do tipo Alerta (que estende a classe Dialog)
         Alert janelaAlerta = new Alert(tipoAlerta);
+        
+//        //Aplica o tema a interface
+//        this.tema.setScene(janelaAlerta.getDialogPane().getScene());
+
         janelaAlerta.setTitle(titulo);
         janelaAlerta.setHeaderText(cabeca);
         janelaAlerta.setContentText(texto);
@@ -238,13 +251,16 @@ public class TelaPrincipalController implements Initializable {
             Parent raiz;
             try {
                 raiz = loader.load();
-                Scene scene = new Scene(raiz);
+                Scene cenaProg = new Scene(raiz);
                 
+                 // Aplica o tema da interface
+                this.tema.setScene(cenaProg);
+
                 // Pega o Controlador e muda o texto conforme o parametro texto
                 TelaProgressoController controlaProg =  loader.getController();
                 controlaProg.setLabelTexto1(texto);
                 
-                this.telaProgresso.setScene(scene);
+                this.telaProgresso.setScene(cenaProg);
                 telaProgresso.initModality(Modality.APPLICATION_MODAL);
                 this.telaProgresso.showAndWait();
             } catch (IOException e) {
@@ -647,8 +663,8 @@ public class TelaPrincipalController implements Initializable {
                         Alert.AlertType.WARNING);                
             }
             else if(this.codColetaComp == 1 && this.codColetaInsu == -1){
-                if(this.criaJanelaEscolha("ALERTA!",
-                        "As datas das publicacoes de INSUMOS nao puderam ser verificadas. Isso pode ter ocorrido porque:\n\n- A CEF modficou o formato do cabeçalho das publicacoes.\n- O cabecalho foi editado por um usuario.\n- A(s) planilha(s) selecionada(s) nao é(sao) da publicacao esperada.",
+                if(this.criaJanelaAlerta("ALERTA!",
+                        "As datas das publicacoes de INSUMOS não puderam ser verificadas. Isso pode ter ocorrido porque:\n\n- A CEF modficou o formato do cabeçalho das publicacões.\n- O cabeçalho foi editado por um usuário.\n- A(s) planilha(s) selecionada(s) nao é(são) da publicação esperada.",
                         "Deseja continuar?",
                         "Sim",
                         "Nao",
@@ -686,8 +702,8 @@ public class TelaPrincipalController implements Initializable {
                         Alert.AlertType.ERROR);         
             }
             else if(this.codColetaComp == 0 && this.codColetaInsu == -1){
-                        if(this.criaJanelaEscolha("ALERTA!",
-                        "As datas das publicacoes de INSUMOS nao puderam ser verificadas. Isso pode ter ocorrido porque:\n\n- A CEF modficou o formato do cabeçalho das publicacoes.\n- O cabecalho foi editado por um usuario.\n- A(s) planilha(s) selecionada(s) nao é(sao) da publicacao esperada.",
+                        if(this.criaJanelaAlerta("ALERTA!",
+                        "As datas das publicacoes de INSUMOS não puderam ser verificadas. Isso pode ter ocorrido porque:\n\n- A CEF modficou o formato do cabeçalho das publicacões.\n- O cabeçalho foi editado por um usuário.\n- A(s) planilha(s) selecionada(s) nao é(são) da publicação esperada.",
                         "Deseja continuar?",
                         "Sim",
                         "Nao",
@@ -708,8 +724,8 @@ public class TelaPrincipalController implements Initializable {
                 }
             }
             else if(this.codColetaComp == -1 && this.codColetaInsu == -1){
-                if(this.criaJanelaEscolha("ALERTA!",
-                        "As datas das publicacoes de INSUMOS nao puderam ser verificadas. Isso pode ter ocorrido porque:\n\n- A CEF modficou o formato do cabeçalho das publicacoes.\n- O cabecalho foi editado por um usuario.\n- A(s) planilha(s) selecionada(s) nao é(sao) da publicacao esperada.",
+                if(this.criaJanelaAlerta("ALERTA!",
+                        "As datas das publicacoes de INSUMOS não puderam ser verificadas. Isso pode ter ocorrido porque:\n\n- A CEF modficou o formato do cabeçalho das publicacões.\n- O cabeçalho foi editado por um usuário.\n- A(s) planilha(s) selecionada(s) nao é(são) da publicação esperada.",
                         "Deseja continuar?",
                         "Sim",
                         "Nao",
@@ -722,7 +738,7 @@ public class TelaPrincipalController implements Initializable {
                         "confirmar",
                         Alert.AlertType.INFORMATION);
                 }
-                if(this.criaJanelaEscolha("ALERTA!",
+                if(this.criaJanelaAlerta("ALERTA!",
                         "As datas das publicacoes de COMPOSIÇÕES nao puderam ser verificadas. Isso pode ter ocorrido porque:\n\n- A CEF modficou o formato do cabeçalho das publicacoes.\n- O cabecalho foi editado por um usuario.\n- A(s) planilha(s) selecionada(s) nao é(sao) da publicacao esperada.",
                         "Deseja continuar?",
                         "Sim",
@@ -738,7 +754,7 @@ public class TelaPrincipalController implements Initializable {
                 }
             }
             else if(this.codColetaComp == -1 && this.codColetaInsu == 1){
-                if(this.criaJanelaEscolha("ALERTA!",
+                if(this.criaJanelaAlerta("ALERTA!",
                         "As datas das publicacoes de COMPOSIÇÕES nao puderam ser verificadas. Isso pode ter ocorrido porque:\n\n- A CEF modficou o formato do cabeçalho das publicacoes.\n- O cabecalho foi editado por um usuario.\n- A(s) planilha(s) selecionada(s) nao é(sao) da publicacao esperada.",
                         "Deseja continuar?",
                         "Sim",
@@ -762,7 +778,7 @@ public class TelaPrincipalController implements Initializable {
                 }
             }
             else if(this.codColetaComp == -1 && this.codColetaInsu == 0){
-                 if(this.criaJanelaEscolha("ALERTA!",
+                 if(this.criaJanelaAlerta("ALERTA!",
                         "As datas das publicacoes de COMPOSIÇÕES nao puderam ser verificadas. Isso pode ter ocorrido porque:\n\n- A CEF modficou o formato do cabeçalho das publicacoes.\n- O cabecalho foi editado por um usuario.\n- A(s) planilha(s) selecionada(s) nao é(sao) da publicacao esperada.",
                         "Deseja continuar?",
                         "Sim",
@@ -826,7 +842,7 @@ public class TelaPrincipalController implements Initializable {
                         break;
 
                     case -1:
-                        if(this.criaJanelaEscolha("ALERTA!",
+                        if(this.criaJanelaAlerta("ALERTA!",
                                 "As datas das publicacoes de COMPOSIÇÕES nao puderam ser verificadas. Isso pode ter ocorrido porque:\n\n- A CEF modficou o formato do cabeçalho das publicacoes.\n- O cabecalho foi editado por um usuario.\n- A(s) planilha(s) selecionada(s) nao é(sao) da publicacao esperada.",
                                 "Deseja continuar?",
                                 "Sim",

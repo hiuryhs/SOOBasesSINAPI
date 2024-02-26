@@ -3,11 +3,6 @@
  */
 package br.ufsc;
 
-import br.ufsc.core.excel.ColetorComposicao;
-import br.ufsc.core.excel.ColetorInsumo;
-import br.ufsc.core.excel.EscritorComposicao;
-import br.ufsc.core.excel.EscritorHoras;
-import br.ufsc.core.excel.EscritorInsumo;
 import br.ufsc.view.GUI;
 
 public class App {
@@ -16,36 +11,5 @@ public class App {
     public static void main(String[] args) {
         
         GUI.main(args);
-        System.out.println("RODA FILHA DA PUTA");
-//        String enderecoSerOner = "D:\\00 - Downloads\\11 - NOV - 14-12-2023\\ONERADO\\SINAPI_Custo_Ref_Composicoes_Analitico_SC_202311_NaoDesonerado.xlsx";
-//        String enderecoSerDeso = "D:\\00 - Downloads\\11 - NOV - 14-12-2023\\DESONERADO\\SINAPI_Custo_Ref_Composicoes_Analitico_SC_202311_Desonerado.xlsx";
-//        String enderecoInsuOner = "D:\\00 - Downloads\\11 - NOV - 14-12-2023\\ONERADO\\SINAPI_Preco_Ref_Insumos_SC_202311_NaoDesonerado.xlsx";
-//        String enderecoInsuDeso = "D:\\00 - Downloads\\11 - NOV - 14-12-2023\\DESONERADO\\SINAPI_Preco_Ref_Insumos_SC_202311_Desonerado.xlsx";
-//        String enderecoInsuFam = "D:\\00 - Downloads\\11 - NOV - 14-12-2023\\DESONERADO\\_SINAPI_Relatório_Família_de_Insumos_2023_11.xlsx";
-//        String enderecoSalva = "D:\\00 - Downloads\\11 - NOV - 14-12-2023\\TESTE2";
-//        
-//        ColetorComposicao coletorComp = new ColetorComposicao();
-//        ColetorInsumo coletorInsu = new ColetorInsumo();
-//        
-//        int coletaComp;
-//        coletorComp.abrePastasExcel(enderecoSerDeso, enderecoSerOner);
-//        coletaComp = coletorComp.buscaComposicoes();
-//        
-//        //46729
-//        EscritorComposicao escritorComp = new EscritorComposicao();
-//        escritorComp.criaBaseComp(coletorComp.getComposicoes(), coletorComp.getDadosPublicacao().pegaDataFormatada(), enderecoSalva);
-//        
-//        EscritorHoras escritorHoras = new EscritorHoras();
-//        escritorHoras.criaBaseHoras(coletorComp.getComposicoes(), coletorComp.getDadosPublicacao().pegaDataFormatada(), enderecoSalva);
-//        
-//        int coletaInsu;
-//        coletorInsu.abrePastasExcel(enderecoInsuDeso, enderecoInsuOner, enderecoInsuFam);
-//        coletaInsu = coletorInsu.buscaInsumosPrecos();
-//        coletorInsu.buscaInsumoFam();
-//        EscritorInsumo escritorInsu = new EscritorInsumo();        
-//        escritorInsu.criaBaseComp(coletorInsu.getInsumos(), coletorInsu.getDadosPublicacao().pegaDataFormatada(), enderecoSalva);
-//        
-       
-                
     }
 }
